@@ -12,14 +12,23 @@ return {
   opts = {
     -- Configure core features of AstroNvim
     features = {
-      large_buf = { size = 1024 * 500, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
-      autopairs = true, -- enable autopairs at start
-      cmp = true, -- enable completion at start
-      diagnostics_mode = 3, -- diagnostic mode on start (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
-      highlighturl = true, -- highlight URLs at start
-      notifications = true, -- enable notifications at start
+      -- set global limits for large files for disabling features like
+      -- treesitter
+      large_buf = { size = 1024 * 500, lines = 10000 },
+      -- enable autopairs at start
+      autopairs = true,
+      -- enable completion at start
+      cmp = true,
+      -- diagnostic mode on start
+      -- (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      diagnostics_mode = 3,
+      -- highlight URLs at start
+      highlighturl = true,
+      -- enable notifications at start
+      notifications = true,
     },
-    -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
+    -- Diagnostics configuration (for vim.diagnostics.config({...})) when
+    -- diagnostics are on
     diagnostics = {
       virtual_text = true,
       underline = true,
@@ -32,10 +41,42 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
+
+        -- テキストの表示方法を変更します。バッファ内のテキストは変更されません。
+        -- trueにすると、ウィンドウの幅より長い行が折り返され、表示が次の行に
+        -- 続きます。
+        -- falseの場合、行は折り返されず、長い行の一部のみが表示されます。
         wrap = true, -- sets vim.opt.wrap
+
         -- 以下は自分で設定
+
+        -- カーソルが存在する行にハイライトを当ててくれます。
+        cursorline = true,
+
         -- 80文字目にラインを入れる
         colorcolumn = "80",
+
+        -- 挿入されるテキストの最大幅。長い行は、この幅を得るために空白の後に
+        -- 分割されます。値をゼロにすると、これが無効になります。
+        -- 「textwidth」がゼロの場合、「wrapmargin」が使用される可能性が
+        -- あります。
+        textwidth = 80,
+
+        -- formatoptions = "tcqj" <- default
+        -- t: 'textwidth'が設定されている場合、自動的にテキスト部分を改行する。
+        -- c: 自動的にコメントを改行。自動的にコメントリーダーを挿入する。
+        -- q: gqコマンドでコメントをフォーマットする。Note that formatting will not
+        --   change blank lines or lines containing only the comment leader. A new
+        --   paragraph starts after such a line, or when the comment leader changes.
+        -- j: 複数行のコメントを連結する際に、余計なコメントリーダーを消す
+        -- r: 新しい行が挿入されるコメントにおけるコメントリーダーを挿入する。
+        -- automatically insert the current comment leader after hitting <Enter> in Insert mode.
+        -- o: Oやoを使用して新しい行が作られるコメントにおいて、コメントリーダーを挿入する。automatically insert the current comment leader after hitting 'o' or
+        --   'O' in Normal mode. In case comment is unwanted in a specific place use
+        --   CTRL-U to quickly delete it. i_CTRL_U
+        -- local_vim.opt.formatoptions:append { m = true, M = true }
+        -- local_vim.opt.formatoptions = "tcqjrolmM"
+        formatoptions = "tcqjromM",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
