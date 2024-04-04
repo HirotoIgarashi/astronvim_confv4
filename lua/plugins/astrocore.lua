@@ -15,10 +15,13 @@ return {
       -- set global limits for large files for disabling features like
       -- treesitter
       large_buf = { size = 1024 * 500, lines = 10000 },
+
       -- enable autopairs at start
       autopairs = true,
+
       -- enable completion at start
       cmp = true,
+
       -- diagnostic mode on start
       -- (
       --   0 = off,
@@ -27,8 +30,10 @@ return {
       --   3 = on
       -- )
       diagnostics_mode = 3,
+
       -- highlight URLs at start
       highlighturl = true,
+
       -- enable notifications at start
       notifications = true,
     },
@@ -38,11 +43,13 @@ return {
       virtual_text = true,
       underline = true,
     },
+
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
         -- カーソル行からの相対的な行番号を表示する
         relativenumber = true, -- sets vim.opt.relativenumber
+
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
