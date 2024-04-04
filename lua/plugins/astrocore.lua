@@ -20,7 +20,12 @@ return {
       -- enable completion at start
       cmp = true,
       -- diagnostic mode on start
-      -- (0 = off, 1 = no signs/virtual text, 2 = no virtual text, 3 = on)
+      -- (
+      --   0 = off,
+      --   1 = no signs/virtual text,
+      --   2 = no virtual text,
+      --   3 = on
+      -- )
       diagnostics_mode = 3,
       -- highlight URLs at start
       highlighturl = true,
@@ -66,18 +71,18 @@ return {
         -- t: 'textwidth'が設定されている場合、自動的にテキスト部分を改行する。
         -- c: 自動的にコメントを改行。自動的にコメントリーダーを挿入する。
         -- q: gqコマンドでコメントをフォーマットする。
-        --   Note that formatting will not change blank lines or lines
-        --   containing only the comment leader. A new paragraph starts after
-        --   such a line, or when the comment leader changes.
+        --    Note that formatting will not change blank lines or lines
+        --    containing only the comment leader. A new paragraph starts after
+        --    such a line, or when the comment leader changes.
         -- j: 複数行のコメントを連結する際に、余計なコメントリーダーを消す
         -- r: 新しい行が挿入されるコメントにおけるコメントリーダーを挿入する。
-        --   automatically insert the current comment leader after hitting
-        --   <Enter> in Insert mode.
+        --    automatically insert the current comment leader after hitting
+        --    <Enter> in Insert mode.
         -- o: Oやoを使用して新しい行が作られるコメントにおいて、
-        --   コメントリーダーを挿入する。
-        --   automatically insert the current comment leader after hitting
-        --   'o' or 'O' in Normal mode. In case comment is unwanted in
-        --   a specific place use CTRL-U to quickly delete it. i_CTRL_U
+        --    コメントリーダーを挿入する。
+        --    automatically insert the current comment leader after hitting
+        --    'o' or 'O' in Normal mode. In case comment is unwanted in a
+        --    specific place use CTRL-U to quickly delete it. i_CTRL_U
         -- local_vim.opt.formatoptions:append { m = true, M = true }
         -- local_vim.opt.formatoptions = "tcqjrolmM"
         formatoptions = "tcqjromM",
@@ -86,6 +91,12 @@ return {
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+
+        -- 以下は自分で設定
+
+        -- enable or disable auto formatting at start
+        -- (lsp.formatting.format_on_save must be enabled)
+        autoformat_enabled = true,
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -118,7 +129,8 @@ return {
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        -- change description but the same command
+        ["<C-s>"] = { ":w!<cr>", desc = "Save File" },
       },
       t = {
         -- setting a mapping to false will disable it
