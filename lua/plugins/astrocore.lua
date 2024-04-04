@@ -27,11 +27,15 @@ return {
     -- vim options can be configured here
     options = {
       opt = { -- vim.opt.<key>
+        -- カーソル行からの相対的な行番号を表示する
         relativenumber = true, -- sets vim.opt.relativenumber
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
         wrap = true, -- sets vim.opt.wrap
+        -- 以下は自分で設定
+        -- 80文字目にラインを入れる
+        colorcolumn = "80",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)

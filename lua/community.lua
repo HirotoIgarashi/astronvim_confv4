@@ -17,6 +17,7 @@ return {
   -- DEBUGGIN PLUGINS
   -- DIAGNOSTICS PLUGINS
   -- EDITOR PLUGINS
+  { import = "astrocommunity.editing-support.treesj" },
   -- FILE EXPLORE PLUGINS
   -- GIT PLUGINS
   -- INDENT PLUGINS
@@ -25,6 +26,7 @@ return {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   -- MEDIA PLUGINS
   -- MOTION PLUGINS
+  { import = "astrocommunity.motion.nvim-surround" },
   -- NOTE TAKING PLUGINS
   -- PROGRAMMING LANGUAGE SUPPORT PLUGINS
   -- PROJECT PLUGINS
