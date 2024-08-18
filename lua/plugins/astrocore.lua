@@ -1,14 +1,10 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
 --       as this provides autocomplete and documentation while editing
 
----@type LazySpec
 return {
   "AstroNvim/astrocore",
-  ---@type AstroCoreOpts
   opts = {
     -- Configure core features of AstroNvim
     features = {
@@ -46,13 +42,13 @@ return {
 
     -- vim options can be configured here
     options = {
-      opt = { -- vim.opt.<key>
+      opt = {                  -- vim.opt.<key>
         -- カーソル行からの相対的な行番号を表示する
         relativenumber = true, -- sets vim.opt.relativenumber
 
-        number = true, -- sets vim.opt.number
-        spell = false, -- sets vim.opt.spell
-        signcolumn = "auto", -- sets vim.opt.signcolumn to auto
+        number = true,         -- sets vim.opt.number
+        spell = false,         -- sets vim.opt.spell
+        signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
 
         -- テキストの表示方法を変更します。バッファ内のテキストは変更されません。
         -- trueにすると、ウィンドウの幅より長い行が折り返され、表示が次の行に
@@ -92,7 +88,8 @@ return {
         --    specific place use CTRL-U to quickly delete it. i_CTRL_U
         -- local_vim.opt.formatoptions:append { m = true, M = true }
         -- local_vim.opt.formatoptions = "tcqjrolmM"
-        formatoptions = "tcqjromM",
+        -- formatoptions = "tcqjromM",
+        formatoptions = "tcqjn",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
