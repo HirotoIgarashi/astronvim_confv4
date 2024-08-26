@@ -42,13 +42,13 @@ return {
 
     -- vim options can be configured here
     options = {
-      opt = {                  -- vim.opt.<key>
+      opt = { -- vim.opt.<key>
         -- カーソル行からの相対的な行番号を表示する
         relativenumber = true, -- sets vim.opt.relativenumber
 
-        number = true,         -- sets vim.opt.number
-        spell = false,         -- sets vim.opt.spell
-        signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
+        number = true, -- sets vim.opt.number
+        spell = false, -- sets vim.opt.spell
+        signcolumn = "auto", -- sets vim.opt.signcolumn to auto
 
         -- テキストの表示方法を変更します。バッファ内のテキストは変更されません。
         -- trueにすると、ウィンドウの幅より長い行が折り返され、表示が次の行に
@@ -62,13 +62,13 @@ return {
         expandtab = true,
 
         -- タブの幅を２文字分として表示する
-        tabstop = "2",
+        tabstop = 2,
 
         -- カーソルが存在する行にハイライトを当ててくれます。
         cursorline = true,
 
         -- 80文字目にラインを入れる
-        colorcolumn = "80",
+        -- colorcolumn = 80,
 
         -- 挿入されるテキストの最大幅。長い行は、この幅を得るために空白の後に
         -- 分割されます。値をゼロにすると、これが無効になります。
