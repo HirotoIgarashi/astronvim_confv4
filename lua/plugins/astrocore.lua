@@ -105,6 +105,8 @@ return {
 
         -- 以下は自分で設定
 
+        python3_host_prog = "/usr/bin/python3",
+
         -- enable or disable auto formatting at start
         -- (lsp.formatting.format_on_save must be enabled)
         autoformat_enabled = true,
