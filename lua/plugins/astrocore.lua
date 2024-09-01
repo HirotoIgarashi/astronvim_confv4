@@ -61,9 +61,9 @@ return {
         -- 入力したタブを数文字分のスペースに置き換える
         expandtab = true,
         -- タブの幅を２文字分として表示する
-        tabstop = 2,
+        tabstop = 4,
         -- インデントのスペース幅を２文字とする
-        shiftwidth = 2,
+        shiftwidth = 4,
 
         -- カーソルが存在する行にハイライトを当ててくれます。
         cursorline = true,
