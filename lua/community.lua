@@ -25,7 +25,7 @@ return {
   -- MARKDOWN/LATEX PLUGINS
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
-  { import = "astrocommunity.markdown-and-latex.markview-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   -- MEDIA PLUGINS
   -- MOTION PLUGINS
   { import = "astrocommunity.motion.nvim-surround" },
