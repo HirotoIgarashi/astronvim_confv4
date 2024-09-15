@@ -27,5 +27,8 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+-- ヘルプを日本語にする
+vim.opt.helplang = "ja"
+
 require "lazy_setup"
 require "polish"
