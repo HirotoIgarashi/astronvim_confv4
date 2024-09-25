@@ -23,7 +23,7 @@ return {
   -- INDENT PLUGINS
   -- LSP PLUGINS
   -- MARKDOWN/LATEX PLUGINS
-  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  -- { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
   -- { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   -- MEDIA PLUGINS
