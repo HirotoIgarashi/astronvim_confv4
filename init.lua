@@ -2,7 +2,7 @@
 --   other files for execution
 -- This file doesn't necessarily need to be touched, BE CAUTIOUS editing this
 --   file and proceed at your own risk.
-local lazypath = vim.env.LAZY or vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+local lazypath = vim.env.LAZY or vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.env.LAZY or (vim.uv or vim.loop).fs_stat(lazypath)) then
   -- stylua: ignore
   vim.fn.system({
@@ -21,14 +21,14 @@ if not pcall(require, "lazy") then
   -- stylua: ignore
   vim.api.nvim_echo({
     { ("Unable to load lazy from: %s\n"):format(lazypath), "ErrorMsg" },
-    { "Press any key to exit...", "MoreMsg" },
+    { "Press any key to exit...",                          "MoreMsg" },
   }, true, {})
-  vim.fn.getchar()
-  vim.cmd.quit()
+    vim.fn.getchar()
+    vim.cmd.quit()
 end
 
 -- ヘルプを日本語にする
 vim.opt.helplang = "ja"
 
-require "lazy_setup"
-require "polish"
+require("lazy_setup")
+require("polish")
