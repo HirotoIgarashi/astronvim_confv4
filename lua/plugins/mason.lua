@@ -13,7 +13,7 @@ return {
                 -- add more arguments for adding more language servers
                 "pyright",
                 -- "tsserver", ts_lsに変更されたか？
-                -- "ts_ls",
+                "ts_ls",
             })
         end,
     },
