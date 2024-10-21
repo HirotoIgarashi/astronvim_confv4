@@ -36,9 +36,9 @@ return {
         },
         -- enable servers that you already have installed without mason
         servers = {
-            "ts_ls",
-            "pyright",
-            "clangd",
+            -- "ts_ls",
+            -- "pyright",
+            -- "clangd",
         },
         -- customize language server configuration options passed to `lspconfig`
         ---@diagnostic disable: missing-fields
